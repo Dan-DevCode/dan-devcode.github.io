@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#home">Daniel.</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Social Links Sidebar -->
+    <div class="social-sidebar">
+        <a href="https://www.linkedin.com/in/daniel--samarin/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="tooltip">LinkedIn</span>
+        </a>
+        <a href="https://github.com/Dan-DevCode" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+            <span class="tooltip">GitHub</span>
+        </a>
+        <a href="https://profile.indeed.com/?hl=en_US&co=US&from=gnav-techbiz--prr" target="_blank" class="social-link">
+            <i class="fab fa-briefcase"></i>
+            <span class="tooltip">Indeed</span>
+        </a>
+        <a href="Resume-Daniel-Samarin.pdf" target="_blank" class="social-link">
+            <i class="fas fa-file-alt"></i>
+            <span class="tooltip">Resume</span>
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="subtitle">— I am</span>
+                    <h1>Daniel Samarin</h1>
+                    <h2 class="profession">AI Engineer / Data Analyst</h2>
+                    <p>Passionate about leveraging artificial intelligence and data analytics to solve real-world problems.</p>
+                    <a href="#about" class="cta-button">About Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- You can add your image here -->
+                <div class="image-placeholder"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am an AI Engineer and Data Analyst with an Advanced Diploma in AI Engineering and a Certificate in Data Analytics. My passion lies in harnessing the power of machine learning, data visualization, and automation to drive intelligent decision-making.</p>
+                    <p>With a strong foundation in Python, SQL, Power BI, and cloud technologies, I specialize in transforming complex datasets into actionable insights. Whether it's building predictive models, optimizing workflows, or uncovering hidden patterns, I thrive on solving challenges with data-driven solutions.</p>
+                    <p>Beyond technical expertise, I bring a problem-solving mindset, adaptability, and a keen eye for detail, making me an asset to any data-driven team. I'm eager to collaborate on innovative projects that push the boundaries of AI and analytics.</p>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Power BI</li>
+                            <li>Machine Learning</li>
+                            <li>Data Analytics</li>
+                            <li>Cloud Technologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#projects" class="scroll-arrow">
+            <span class="scroll-text">Go to Projects</span>
+            <div class="arrow"></div>
+        </a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Church Website</h3>
+                    <p>A collaborative web development project creating a comprehensive church website with features including event calendar, donation system, and member resources. Built using HTML, CSS, JavaScript, and Node.js with focus on responsive design and user experience.</p>
+                    <div class="project-links">
+                        <a href="#" class="button">View Project</a>
+                        <a href="#" class="button">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Hangry - Application</h3>
+                    <p>A smart meal planning application that helps users manage recipes, track ingredients, and reduce food waste. Features include recipe management, meal scheduling, inventory tracking, and budget management with an intuitive user interface.</p>
+                    <div class="project-links">
+                        <a href="#" class="button">View Project</a>
+                        <a href="#" class="button">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>AI Customer Sentiment Analyzer</h3>
+                    <p>Developed a machine learning model using Python and Natural Language Processing to analyze customer feedback and social media data. Features real-time sentiment analysis, trend visualization using Power BI, and automated reporting system.</p>
+                    <div class="project-links">
+                        <a href="#" class="button">View Project</a>
+                        <a href="https://github.com/Dan-DevCode" class="button">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#contact" class="scroll-arrow">
+            <span class="scroll-text">Go to Contact</span>
+            <div class="arrow"></div>
+        </a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>email@example.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 234 567 890</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Your Location</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/Dan-DevCode" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/daniel--samarin/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 Daniel Samarin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
