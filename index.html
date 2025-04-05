@@ -98,33 +98,126 @@
         <div class="section-container">
             <h2>My Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <h3>Church Website</h3>
-                    <p>A collaborative web development project creating a comprehensive church website with features including event calendar, donation system, and member resources. Built using HTML, CSS, JavaScript, and Node.js with focus on responsive design and user experience.</p>
-                    <div class="project-links">
-                        <a href="#" class="button">View Project</a>
-                        <a href="#" class="button">GitHub</a>
+                <div class="projects-container">
+                    <!-- First page with 4 projects -->
+                    <div class="projects-page">
+                        <!-- Church Website Project -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="Church.jpg" alt="Church Website Project">
+                            </div>
+                            <h3>Church Website</h3>
+                            <p>Collaborative project developing a user-friendly website for a local church. Features include event calendar, donation system, and community updates.</p>
+                            <div class="project-links">
+                                <a href="#" class="button view-project" data-project="church">View Project</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+
+                        <!-- Hangry App Project -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="Hangry.jpg" alt="Hangry App Project">
+                            </div>
+                            <h3>Hangry - Application</h3>
+                            <p>Meal planning and ingredient inventory management app. Features include recipe management, meal scheduling, and shopping list generation.</p>
+                            <div class="project-links">
+                                <a href="#" class="button view-project" data-project="hangry">View Project</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+
+                        <!-- AI Customer Sentiment Analyzer -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="Analyzer.png" alt="AI Customer Sentiment Analyzer">
+                            </div>
+                            <h3>AI Customer Sentiment Analyzer</h3>
+                            <p>Machine learning model for analyzing customer feedback. Features include real-time sentiment analysis and trend visualization using Power BI.</p>
+                            <div class="project-links">
+                                <a href="#" class="button view-project" data-project="analyzer">View Project</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+
+                        <!-- Data Visualization Dashboard -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="Data.png" alt="Data Visualization Dashboard">
+                            </div>
+                            <h3>Data Visualization Dashboard</h3>
+                            <p>Interactive dashboard for business analytics. Features include real-time data updates, custom reporting, and predictive analytics.</p>
+                            <div class="project-links">
+                                <a href="#" class="button view-project" data-project="data">View Project</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second page with 4 more projects -->
+                    <div class="projects-page">
+                        <!-- Machine Learning Pipeline -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="Machine.webp" alt="Machine Learning Pipeline">
+                            </div>
+                            <h3>Machine Learning Pipeline</h3>
+                            <p>Automated ML pipeline for data processing and model training. Features include data preprocessing, model selection, and performance evaluation.</p>
+                            <div class="project-links">
+                                <a href="#" class="button view-project" data-project="machine">View Project</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+
+                        <!-- Cloud Migration Tool -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="Migration.png" alt="Cloud Migration Tool">
+                            </div>
+                            <h3>Cloud Migration Tool</h3>
+                            <p>Tool for automating cloud infrastructure migration. Features include resource mapping, cost optimization, and deployment automation.</p>
+                            <div class="project-links">
+                                <a href="#" class="button view-project" data-project="migration">View Project</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+
+                        <!-- E-commerce Platform -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="E-commerce.jpeg" alt="E-commerce Platform">
+                            </div>
+                            <h3>E-commerce Platform</h3>
+                            <p>Full-stack e-commerce solution with real-time inventory management, payment processing, and customer analytics dashboard.</p>
+                            <div class="project-links">
+                                <a href="#" class="button view-project" data-project="ecommerce">View Project</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
+
+                        <!-- Mobile App Development -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="Mobile.png" alt="Mobile App Development">
+                            </div>
+                            <h3>Mobile App Development</h3>
+                            <p>Cross-platform mobile application for task management. Features include offline support, push notifications, and data synchronization.</p>
+                            <div class="project-links">
+                                <a href="#" class="button view-project" data-project="mobile">View Project</a>
+                                <a href="#" class="button">GitHub</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <h3>Hangry - Application</h3>
-                    <p>A smart meal planning application that helps users manage recipes, track ingredients, and reduce food waste. Features include recipe management, meal scheduling, inventory tracking, and budget management with an intuitive user interface.</p>
-                    <div class="project-links">
-                        <a href="#" class="button">View Project</a>
-                        <a href="#" class="button">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image"></div>
-                    <h3>AI Customer Sentiment Analyzer</h3>
-                    <p>Developed a machine learning model using Python and Natural Language Processing to analyze customer feedback and social media data. Features real-time sentiment analysis, trend visualization using Power BI, and automated reporting system.</p>
-                    <div class="project-links">
-                        <a href="#" class="button">View Project</a>
-                        <a href="https://github.com/Dan-DevCode" class="button">GitHub</a>
-                    </div>
-                </div>
+            </div>
+
+            <div class="scroll-buttons">
+                <button class="scroll-btn scroll-left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="scroll-btn scroll-right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
         <a href="#contact" class="scroll-arrow">
@@ -174,6 +267,31 @@
             <button class="close-popup">&times;</button>
             <h3 id="popupTitle"></h3>
             <p id="popupDescription"></p>
+            <div class="projects-list">
+                <h4>Projects Done</h4>
+                <ul id="projectsList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Popup -->
+    <div id="projectPopup" class="project-popup">
+        <div class="popup-content">
+            <div class="project-popup-image">
+                <img src="" alt="Project Image">
+            </div>
+            <h3></h3>
+            <p></p>
+            <div class="project-popup-content">
+                <div class="project-details">
+                    <h4>Project Details</h4>
+                    <ul></ul>
+                </div>
+                <div class="project-tech">
+                    <h4>Technologies Used</h4>
+                    <ul></ul>
+                </div>
+            </div>
         </div>
     </div>
 
