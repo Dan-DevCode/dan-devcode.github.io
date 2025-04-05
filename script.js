@@ -156,4 +156,131 @@ window.addEventListener('scroll', () => {
     });
     
     lastScrollTop = scrollTop;
+});
+
+class TypeWriter {
+    constructor(txtElement, words, wait = 3000) {
+        this.txtElement = txtElement;
+        this.words = words;
+        this.txt = '';
+        this.wait = parseInt(wait, 10);
+        this.type();
+        this.isDeleting = false;
+    }
+
+    type() {
+        // Current full text
+        const current = this.wordIndex % this.words.length;
+        const fullTxt = this.words[current];
+
+        // Check if deleting
+        if(this.isDeleting) {
+            // Remove a character
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            // Add a character
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        // Insert text
+        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+        // Initial type speed
+        let typeSpeed = 100;
+
+        if(this.isDeleting) {
+            typeSpeed /= 2;
+        }
+
+        // If word is complete
+        if(!this.isDeleting && this.txt === fullTxt) {
+            // Make a pause at end
+            typeSpeed = this.wait;
+            this.isDeleting = true;
+        } else if(this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            // Move to next word
+            this.wordIndex++;
+            // Pause before start typing
+            typeSpeed = 500;
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
+    }
+}
+
+// Init on DOM Load
+document.addEventListener('DOMContentLoaded', init);
+
+function init() {
+    const txtElement = document.querySelector('.typing-text');
+    const words = ['Daniel Samarin'];
+    const wait = 3000;
+    // Init TypeWriter
+    new TypeWriter(txtElement, words, wait);
+}
+
+// Skill Popup Functionality
+const skillDescriptions = {
+    python: {
+        title: "Python Programming",
+        description: "Proficient in Python development with expertise in data manipulation, automation, and machine learning. Experienced with libraries like NumPy, Pandas, and Scikit-learn for data analysis and model development."
+    },
+    sql: {
+        title: "SQL Database Management",
+        description: "Skilled in writing complex SQL queries, database design, and optimization. Experienced with various database systems and data warehousing solutions for efficient data storage and retrieval."
+    },
+    powerbi: {
+        title: "Power BI Visualization",
+        description: "Expert in creating interactive dashboards and reports using Power BI. Capable of transforming complex data into clear, actionable visualizations and implementing automated data refresh solutions."
+    },
+    ml: {
+        title: "Machine Learning",
+        description: "Experienced in developing and deploying machine learning models. Proficient in supervised and unsupervised learning techniques, model evaluation, and optimization for real-world applications."
+    },
+    analytics: {
+        title: "Data Analytics",
+        description: "Skilled in data analysis, statistical methods, and business intelligence. Capable of extracting meaningful insights from complex datasets and presenting findings to stakeholders."
+    },
+    cloud: {
+        title: "Cloud Technologies",
+        description: "Experienced with cloud platforms and services. Proficient in cloud-based data storage, computing, and deployment solutions for scalable and efficient data processing."
+    },
+    java: {
+        title: "Java Development",
+        description: "Proficient in Java programming with expertise in object-oriented design and enterprise applications. Experienced with Spring Framework, Java EE, and building scalable backend systems."
+    },
+    webdesign: {
+        title: "Web Design",
+        description: "Skilled in creating modern, responsive websites with a focus on user experience and accessibility. Proficient in HTML5, CSS3, JavaScript, and modern web development frameworks."
+    }
+};
+
+const popup = document.getElementById('skillPopup');
+const popupTitle = document.getElementById('popupTitle');
+const popupDescription = document.getElementById('popupDescription');
+const closePopup = document.querySelector('.close-popup');
+
+document.querySelectorAll('.skill-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const skill = button.getAttribute('data-skill');
+        const description = skillDescriptions[skill];
+        
+        popupTitle.textContent = description.title;
+        popupDescription.textContent = description.description;
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+    document.body.style.overflow = '';
+});
+
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+        popup.style.display = 'none';
+        document.body.style.overflow = '';
+    }
 }); 

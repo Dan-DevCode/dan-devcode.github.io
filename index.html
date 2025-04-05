@@ -57,8 +57,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <!-- You can add your image here -->
-                <div class="image-placeholder"></div>
+                <img src="MainImage.jpg" alt="Daniel Samarin - AI Engineer" class="profile-image">
             </div>
         </div>
     </section>
@@ -75,12 +74,14 @@
                     <div class="skills">
                         <h3>Skills</h3>
                         <ul>
-                            <li>Python</li>
-                            <li>SQL</li>
-                            <li>Power BI</li>
-                            <li>Machine Learning</li>
-                            <li>Data Analytics</li>
-                            <li>Cloud Technologies</li>
+                            <li><button class="skill-btn" data-skill="python">Python</button></li>
+                            <li><button class="skill-btn" data-skill="sql">SQL</button></li>
+                            <li><button class="skill-btn" data-skill="powerbi">Power BI</button></li>
+                            <li><button class="skill-btn" data-skill="ml">Machine Learning</button></li>
+                            <li><button class="skill-btn" data-skill="analytics">Data Analytics</button></li>
+                            <li><button class="skill-btn" data-skill="cloud">Cloud Technologies</button></li>
+                            <li><button class="skill-btn" data-skill="java">Java</button></li>
+                            <li><button class="skill-btn" data-skill="webdesign">Web Design</button></li>
                         </ul>
                     </div>
                 </div>
@@ -152,20 +153,29 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>email@example.com</p>
+                        <p>danielsamarin.ai@gmail.com</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <p>+1 234 567 890</p>
+                        <p>547 509 7488</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>Your Location</p>
+                        <p>Toronto, GTA</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Skill Popup -->
+    <div class="skill-popup" id="skillPopup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h3 id="popupTitle"></h3>
+            <p id="popupDescription"></p>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
